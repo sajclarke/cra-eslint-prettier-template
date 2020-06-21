@@ -49,13 +49,9 @@
     ]
   },
   "lint-staged": {
-    "*.+(js|jsx)": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.+(json|css|md)": [
+    "src/**/*.{js,jsx,ts,tsx,json,md}": [
       "prettier --write",
-      "git add"
+      "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
     ]
   },
   "browserslist": {
